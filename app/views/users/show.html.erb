@@ -1,0 +1,13 @@
+<h1><%= @user.name %>のページ</h1>
+
+<p>メールアドレス: <%= @user.email %></p>
+
+<p>フォロー一覧</p>
+<% @user.following.each do |user| %>
+  <li><%= user.name %></li>
+<% end %>
+
+<p>フォロワー一覧</p>
+<% @user.followers.each do |user| %>
+  <li><%= user.name %></li>
+<% end %>
